@@ -96,13 +96,8 @@ export default {
 <style scoped lang="scss">
 .user{
           width:100%;
-          min-height:300px;
-          display: flex;
-          flex-wrap: wrap;
           .item{
               width:100%;
-              min-height:200px;
-              border:1px solid #888;
               border-radius: 4px;
               padding:0 10px 20px  10px;
           }

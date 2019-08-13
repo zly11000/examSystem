@@ -12,8 +12,8 @@ export const adduser = {
         identity_id:""
     }],
     rules:[{
-        user_name:{required:true,tigger:"blur"},
-        user_pwd:{required:true,tigger:"blur"},
+        user_name:{required:false,tigger:"blur"},
+        user_pwd:{required:false,tigger:"blur"},
         identity_id:{required:false,tigger:"blur"}
     },{
         user_id:{required:true,tigger:"blur"},

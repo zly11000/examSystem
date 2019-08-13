@@ -7,13 +7,13 @@
         :rules="adduser.rules[index]"
         @ind="tab"
         :submit="adduser.submit[index]">
-             <!-- <p>
-               <el-select placeholder="请选择" v-model="addValue">
-                        <el-option :value="item.user_name" v-for="item in getUserList" :key="item.user_id">
-                            {{item.user_name}}
-                        </el-option>
-                 </el-select>
-            </p> -->
+             <el-form-item prop="user_id" v-if="index === 1">
+                <el-select placeholder="请选择" v-model="adduser.config.user_id">
+                            <el-option :value="item.user_name" v-for="item in getUserList" :key="item.user_id">
+                                {{item.user_name}}
+                            </el-option>
+                    </el-select>
+            </el-form-item>
         <el-form-item prop="user_name">
             <el-input placeholder="请输入用户名" v-model="adduser.config.user_name"></el-input>
         </el-form-item>
@@ -161,33 +161,12 @@ export default {
 }
 </script>
 <style scoped lang="scss">
-// .box{
-//     width: 100%;
-//     height:100%;
-//     display: flex;
-//     flex-wrap: wrap;
-//     .item{
-//         width: 32%;
-//         min-height:200px;
-//     }
-// }
  .title{
       font-size:30px;
       width:100%;
       height:100px;
       line-height: 100px;
       }
-//    .addUser{
-//        width: 100%;
-//        height:100%;
-//        .title{
-//       font-size:30px;
-//       width:100%;
-//       height:100px;
-//       line-height: 100px;
-     
-//       }
-//    }
    .warp{
        width: 100%;
        height: 100%;
@@ -195,6 +174,7 @@ export default {
         flex-wrap: wrap;
         >div{
             width: 33.333%;
+             border:1px solid #888;
         }
    }
 </style>
